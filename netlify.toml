@@ -1,16 +1,4 @@
-# Minimal config for static sites
-[build]
-  publish = "."  # Publish from current directory
-  command = "echo 'No build step needed'"  # Empty build command
-
-# Example redirect (adjust as needed)
-[[redirects]]
-  from = "/old"
-  to = "/new.html"
-  status = 301
-
-# Example custom header
 [[headers]]
   for = "/*"
   [headers.values]
-    X-Frame-Options = "DENY"
+    Content-Security-Policy = "upgrade-insecure-requests"
