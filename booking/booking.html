@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bookingstyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8e75413cde.js" crossorigin="anonymous"></script>
+    <script defer src="booking.js"></script>
+    <script defer src="../choosePage/choosepage.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title></title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-left">
+            <img src="assets/house logo.png" alt="" class="house">
+            <img src="assets/bjiro logo sized.png" alt="" class="logo-name">
+        </div>
+    
+        <div class="navbar-right">
+            <button class="aboutbutton">About</button>
+            <button class="contactbutton">Contact</button>
+        </div>
+    </div>
+
+    <div class="bookPage">
+        <div class="middlesection">
+            <div class="bungalowpreview">
+                <div class="bungalow-desc">
+                    <span class="bung-name"></span>
+                    <span class="bung-subtext">Experience luxury and comfort in our stunning property. Perfect for family getaways, romantic retreats, or business trips. Book your stay with us and create unforgettable memories.</span>
+                </div>
+                <div class="imgcontainer"> <img src="assets/bungalowpic.webp" class="bungalow-pics">   </div>
+                <div class="bung-chars">
+                    <div class="characteristic">
+                        <span class="emoji" id="charemoji">🏊‍♂️</span>
+                        <span class="chartext" id="chartextlily">Swimming Pool</span>
+                        <span class="charsubtext" id="charsubtextlily">Private pool with stunning views</span>
+                    </div>
+                    <div class="characteristic">
+                        <span class="emoji">🍳</span>
+                        <span class="chartext">Kitchen</span>
+                        <span class="charsubtext">Kitchen with appliances</span>
+                    </div>
+                    <div class="characteristic">
+                        <span class="emoji">🅿️</span>
+                        <span class="chartext">Free Parking</span>
+                        <span class="charsubtext">Secure parking space included</span>
+                    </div>
+    
+    
+                </div>
+                
+    
+            </div>
+    
+    
+            <div class="calendar-container">
+    
+                <div class="calendartext">
+                    <span class="selecturdate">Select Your Date</span>
+                    <div class="legends">
+                        <div class="available">
+                            <div class="greencircle"></div>
+                            <span class="availabletext">Available</span>
+    
+                        </div>
+                            
+                        <div class="booked">
+                            <div class="redcircle"></div>
+                            <span class="bookedtext">Booked</span>
+                        </div>
+                        </div>
+    
+                </div>
+                
+                <div class="calendarbox">
+                        <div class="calendar-header">
+                            <button id="prev" class="nav-btn">&lt;</button>
+                            <span id="month-year" class="month-year">July 2025</span>
+                            <button id="next" class="nav-btn">&gt;</button>
+                        </div>
+                        <div class="calendar-grid">
+                            <div class="day">Su</div>
+                            <div class="day">Mo</div>
+                            <div class="day">Tu</div>
+                            <div class="day">We</div>
+                            <div class="day">Th</div>
+                            <div class="day">Fr</div>
+                            <div class="day">Sa</div>
+                            <div id="dates"></div>
+                  
+                        </div>
+                </div>
+    
+            </div>
+    
+    
+    
+    
+        </div>
+        
+        <div class="bottomsection">
+            <div class="bottomtextcontainer">  
+                <span class="mainbtmtext">Why Choose Our Property?</span>
+                <span class="subbtmtext">We offer exceptional service, prime location, and luxurious amenities to ensure your stay is nothing short of perfect.</span>  
+            </div>
+    
+            <div class="bottomcharscontainer">
+                <div class="bottomcharacteristic">
+                    <span class="bottomemoji">⭐</span>
+                    <span class="bottomchartext">5-Star Rating</span>
+                    <span class="bottomcharsubtext">Consistently rated excellent by our guests</span>
+                </div>
+                <div class="bottomcharacteristic">
+                    <span class="bottomemoji">📍</span>
+                    <span class="bottomchartext">Prime Location</span>
+                    <span class="bottomcharsubtext">Stunning mountain views and vast skies</span>
+                </div>
+                <div class="bottomcharacteristic">
+                    <span class="bottomemoji">🧹</span>
+                    <span class="bottomchartext">Spotless Clean</span>
+                    <span class="bottomcharsubtext">Professional cleaning after every stay</span>
+                </div>
+                <div class="bottomcharacteristic">
+                    <span class="bottomemoji">📞</span>
+                    <span class="bottomchartext">24/7 Support</span>
+                    <span class="bottomcharsubtext">Always here to help during your stay</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="userInfo">
+        <div class="middlecontainer">
+            <button class="backtodates">‎ <i class="fa-solid fa-arrow-left"></i>‎ ‎ ‎ ‎ Back to Date selection</button>
+            <div class="infoSection">
+                <div class="infoText">
+                    <span class="completeBookingText">Complete Your Booking</span>
+                    <span class="selectedDateText"></span>
+                </div>
+
+                <div class="infoInputs">
+                    <div class="nameInputs">
+                        <div class="nameDiv eligibleForAnimation">
+                            <span class="inputName">First Name *</span>
+                            <div class="inputcontainer">
+                                <input id="lettersOnly" type="text" name="fake-name" autocomplete="nothing" maxlength="20" class="input firstNameInput" placeholder=" " required>
+                                <span class="inputplaceholder">Enter your first name</span>
+                            </div>  
+                        </div>
+
+                        <div class="nameDiv">
+                            <span class="inputName">Last Name *</span>
+                            <div class="inputcontainer">
+                                <input id="lettersOnly" type="text" name="fake-name" autocomplete="nothing" maxlength="20"  class="input lastNameInput" placeholder=" " required>
+                                <span class="inputplaceholder">Enter your last name</span>
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="infoDiv">
+                        <span class="inputName">Phone Number *</span>
+                        <div class="inputcontainer">
+                            <input id="numInput" name="fake-name" autocomplete="nothing" type="number" class="input phoneInput" placeholder=" " required>
+                            <span class="inputplaceholder">Enter your phone number</span>
+                        </div>  
+                    </div>
+
+
+                    <div class="infoDiv">
+                        <span class="inputName">Number of guests staying *</span>
+                        <div class="inputcontainer">
+                            <select required placeholder="‎" class="nbofguests">
+                                <option value="" disabled selected hidden></option>
+                                <option value="1">1 Person</option>
+                                <option value="2">2 People</option>
+                                <option value="3">3 People</option>
+                                <option value="4">4 People</option>
+                                <option value="5">5 People</option>
+                                <option value="6">6 People</option>
+                                
+                              </select>
+                            <span id='listplaceholder' class="inputplaceholder">Select number of guests</span>
+                        </div>  
+                    </div>
+
+                    <div class="uploadDiv">
+                        <span class="inputName">Upload ID Document *</span>
+                        <div class="uploadingSpace">
+                            <i id="uploadicon" class="fa-solid fa-arrow-up-from-bracket"></i>
+                            <span class="uploadtext"><b>Click to upload</b> or drag and drop</span>
+                            <span class="uploadtext">PNG,JPG,PDF(MAX 5MB)</span>
+                            <input type="file" id="fileInput" />
+                        </div>
+
+                        <span class="underuploadtext">Please upload a valid government-issued ID (passport, driver's license, etc.)</span>
+                    </div>
+
+                    <button class="confirmBookingButton" onclick="submitData()">Confirm Booking</button>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

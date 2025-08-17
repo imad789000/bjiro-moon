@@ -1,0 +1,545 @@
+body{
+    overflow-y: hidden;
+    overflow-x: hidden;
+    height: 100vh;
+    width: 100%;
+    background-color: #01294a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    user-select: none;
+  }
+
+
+.loginwindow{
+    width: clamp(340px,59vw,450px);
+    background-color: white;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 12px 12px #011d35;
+    padding-bottom: 30px;
+    
+    /* display: none; */
+
+}
+
+
+.logocontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+
+}
+
+.imgcontainer{
+    width: clamp(130px,5vw,180px);    
+}
+
+.logo{
+    display: block;
+    object-fit: cover;
+    width: 100%;
+}
+
+.textsection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.adminText{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: rgb(8, 8, 8);
+    font-size: clamp(1.6em,5vw,2em);
+}
+
+.bookingText{
+    color: rgb(80, 79, 79);
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 650;
+    font-style: normal;
+    font-size: clamp(0.8em,2vw,1em);
+}
+
+
+.loginInfo{
+    display: flex;
+    flex-direction: column;
+    place-content: left;
+    padding-left: 30px;
+    padding-right: 30px;
+    gap: 8px;
+
+}
+
+.infoboxtext{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 450;
+    font-style: normal;
+    color: rgb(8, 8, 8);
+    font-size: clamp(0.75em,2vw,0.8em);
+    margin-left: 6px;
+}
+
+.inputcontainer {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+
+  }
+
+
+.user-input{
+    width: 95%;
+    border:1.5px solid transparent;
+    outline: none;
+    background-color: #F3F3F5;
+    border-radius: 10px;
+    height: 40px;
+    padding-left: 5%;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 650;
+    font-style: normal;
+    font-size: 0.9em;
+    transition: box-shadow 0.3s ease;   
+}
+
+
+.user-input:focus{
+    border:1.5px solid #A1A1A1;
+    box-shadow: 0 0 0 6px #CFCFCF;
+
+}
+
+.inputcontainer .inputplaceholder{
+    position: absolute;
+    top: 50%;
+    left: 25px;
+    transform: translateY(-50%);
+    color: #aaa;
+    pointer-events: none;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: clamp(0.7em,2vw,0.8em);
+}
+
+.inputcontainer input:not(:placeholder-shown) + .inputplaceholder {
+    opacity: 0;
+  }
+
+.togglePassword{
+    top: 50%;
+    height: 30px;
+    width: 30px;
+    right: 20px;
+    position: absolute;
+    transform: translateY(-50%);
+    border: none;
+    color: rgb(155, 151, 151);
+    border-radius: 50%;
+    transition: background-color 0.2s ease;
+}
+
+.togglePassword:hover {
+    background-color: #cecbcb;
+}
+
+.buttoncontainer{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+    
+
+
+.loginbutton{
+    width: 100%;
+    height: 42px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #01294A;
+    border: none;
+    color: #FFFFFF;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 450;
+    font-style: normal;
+    font-size: 0.8em;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    transition: transform 0.1s ease;
+
+    
+}
+
+.loginbutton:hover{
+    background-color: #134873;
+    transform: scale(1.02);
+    font-size: 0.82em;
+
+}
+
+.forgetPassword{
+    color: rgb(60, 60, 241);
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 450;
+    font-style: normal;
+    font-size: 0.7em;
+    margin-top: -20px;
+    margin-left: 5px;
+}
+
+.forgetPassword:hover{
+    color: rgb(50, 81, 255);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.forgetPasswordWindow{
+    width: clamp(320px,59vw,350px);
+    background-color: white;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 12px 12px #011d35;
+    display: none;
+    padding: 20px;
+    
+}
+
+.emailSentIconDiv{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.emailSentIcon{
+    background-color: #01294a;
+    color: white;
+    padding: 15px;
+    border-radius: 40px;
+    font-size: 2em;
+
+}
+
+.forgetPasswordText{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.fpTitle{
+    font-size: 1.4em;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+
+    padding-bottom: 10px;
+    
+}
+
+.fpSubtext1{
+    width: 60%;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: #717182;
+    font-size: 0.9em;
+    padding-bottom: 50px;
+}
+
+.fpSubtext2{
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: #717182;
+    font-size: 0.75em;
+    margin-bottom: 20px;
+}
+
+.verificationNumberInput{
+    width: 150px;
+    text-align: center;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.verifyCode{
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 450;
+    font-style: normal;
+    border: none;
+    background-color: #01294A;
+    color: white;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.returnToLogin{
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 450;
+    font-style: normal;
+    border: 1px solid rgb(185, 185, 185);
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 10px;
+    transition: background-color 0.2s ease-in-out;
+
+}
+
+.verifyCode:hover{
+    background-color: #01355f;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.returnToLogin:hover{
+    background-color: rgb(216, 216, 216);
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.resetPasswordWindow{
+    width: clamp(320px,59vw,350px);
+    background-color: white;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 12px 12px #011d35;
+    display: none;
+    padding: 20px;
+    
+}
+
+
+.updatePassButton{
+    width: 100%;
+    height: 42px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #01294A;
+    border: none;
+    color: #FFFFFF;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 450;
+    font-style: normal;
+    font-size: 0.8em;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    transition: transform 0.1s ease;
+
+    
+}
+
+.updatePassButton:hover{
+    background-color: #134873;
+    transform: scale(1.02);
+    font-size: 0.82em;
+
+}
+
+.passInputsandNames{
+    display: flex;
+    flex-direction: column;
+    place-content: left;
+    gap: 8px;
+
+}
+
+.shieldIconDiv{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+#shieldIcon{
+    background-color: #01294a;
+    color: white;
+    padding: 20px;
+    border-radius: 40px;
+    font-size: 2em;
+
+}
+
+.resetPasswordText{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.rpTitle{
+    font-size: 1.4em;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+
+    padding-bottom: 10px;
+    
+    
+}
+
+.rpSubtext{
+    /* width: 100%; */
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: #717182;
+    font-size: 0.9em;
+    /* padding-bottom: 50px; */
+}
+
+.passReqText{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.75em;
+    margin-left: 6px;
+    margin-bottom: 5px;
+    color: #717182;
+}
+
+.password-requirements{
+    display: flex;
+    flex-direction: column;
+}
+
+.password-requirements ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 0;
+  }
+  
+.password-requirements li {
+    margin-bottom: 6px;
+    color: #FB2C36;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 0.7em;
+
+  }
+
+.password-requirements li.valid {
+    color: #2a9d8f; /* green when valid */
+  }
+  
+  /* Custom bullet style */
+.password-requirements li::marker {
+    color: rgb(87, 85, 85);
+    font-size: 12px;
+  }
+
+
+#passwordReset:invalid {
+    border: 1px solid #FB2C36; /* red border */
+    /* background-color: #ffe5e5; optional red background */
+}
+#confirmPasswordReset.invalid {
+    border: 1px solid #FB2C36; /* red border */
+    /* background-color: #ffe5e5; optional red background */
+}
+
+.error-message {
+    color: #FB2C36;
+    font-size: 14px;
+    margin-top: -8px;
+    margin-bottom: 10px;
+    margin-left: 6px;
+    display: none;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 0.7em;
+
+  }
+
+  .wrongcode-message{
+    color: #FB2C36;
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    margin-left: 6px;
+    display: none;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 0.7em;
+  }
+
+
+@keyframes error {
+
+    0%{
+        transform: translateX(0);
+    }
+
+    25%{
+        transform: translateX(-5px);
+    }
+
+    50%{
+        transform: translateX(0);
+    }
+
+    75%{
+        transform: translateX(5px);
+    }
+
+    100%{
+        transform: translateX(0);
+    }
+
+}
+
+.incompleteInput{    
+    border: 2px solid rgb(199, 82, 82);
+}
+
+.incompleteDiv{
+    animation-name: error;
+    animation-duration: 0.1s;
+    animation-iteration-count: 3;
+}
+

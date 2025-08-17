@@ -1,0 +1,269 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(to bottom, #d9e7fa, #e2ebfa,  #ffffff);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-attachment: fixed;
+    overflow-x: hidden;
+  }
+
+  * {
+    user-select: none;
+  }
+
+
+.navbar{
+    width: auto;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #01294A;
+    z-index: 1000; 
+}
+
+.navbar-left{
+    display: flex;
+    align-items: center;
+
+}
+
+.navbar-right{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-right: 20px;
+
+}
+
+.house{
+    height: auto; 
+    width: clamp(35px,10vw,70px);
+    margin-left: 8px;
+    margin-top: 3px;
+}
+
+@media (max-width: 600px) {
+
+  .house{
+      margin-left:18px;
+  }
+      
+}
+
+.logo-name{
+    height: auto; 
+    width: clamp(140px,25vw,315px);
+}
+
+.aboutbutton{
+    height: 40px;
+    width: clamp(70px,5vw,90px);
+    background-color: transparent;
+    border: none;
+    color: #fefdfe;
+    font-size: clamp(0.78em,2vw,1em);
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 450;
+    font-style: normal;
+    border-radius: 25px;
+    user-select: none;
+  
+
+}
+
+.contactbutton{
+    height: 40px;
+    width: clamp(70px,5vw,90px);
+    background-color: transparent;
+    border: none;
+    color: #fefdfe;
+    font-size: clamp(0.78em,2vw,1em);
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 450;
+    font-style: normal;
+    border-radius: 25px;
+    user-select: none;
+  
+}
+
+.aboutbutton:hover{
+    background-color: #446179;
+    color: #fefdfe;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    font-weight: 550;
+    font-size: clamp(0.9em,2vw,1.03em);
+}
+
+.contactbutton:hover{
+    background-color: #446179;
+    color: #fefdfe;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    font-weight: 550;
+    font-size: clamp(0.9em,2vw,1.03em);
+}
+
+
+.text-section{
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    flex-direction: column;
+    text-align: center;
+}
+
+.middletext {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 650;
+    font-style: normal;
+    font-size: clamp(2rem, 5vw, 3em);
+    color: #000000;
+    user-select: none;
+}
+
+.middlesubtext {
+    margin-top: 20px;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 410;
+    font-style: italic;
+    font-variation-settings:
+        "wdth" 100;
+    color: #717182;
+    font-size: clamp(0.9em, 2.5vw, 1em);
+    user-select: none;
+}
+
+
+
+
+
+
+.stay-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 80px;
+    padding: 60px 20px;
+  }
+  
+  .stay-card {
+    background-color: white;
+    border-radius: 16px;
+    max-width: 330px;
+    width: 100%;
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.02);
+    transition: box-shadow 0.3s ease;
+    transition: transform 0.4s ease;
+  }
+
+  .stay-card:hover{
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  }
+
+  .imgcontainer{
+    overflow: hidden;
+    border-radius: 12px;
+  }
+  
+  .stay-image {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+    display: block;
+  }
+
+  .stay-card:hover .stay-image {
+    transform: scale(1.05); 
+  }
+
+  .stay-card:hover{
+    transform: scale(1.05);
+  }
+
+  .card-header{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.3em;
+    user-select: none;
+    color:#0A0A0A;
+  }
+
+  .card-subtext{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 0.8em;
+    user-select: none;
+    color: #717182;
+
+  }
+  
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .tags span {
+    background-color: #f0eded;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 550;
+    font-style: normal;
+    user-select: none;
+
+  }
+  
+  .book-button {
+    margin-top: auto;
+    background-color: #1e3a5f;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 12px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 0.82em;
+    user-select: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    transition: transform 0.1s ease;
+  }
+  
+  .book-button:hover {
+    background-color: #134873;
+    transform: scale(1.02);
+    font-size: 0.85em;
+
+
+  }

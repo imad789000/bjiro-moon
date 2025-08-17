@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8e75413cde.js" crossorigin="anonymous"></script>
+    <script defer src="login.js"></script>
+    <link rel="stylesheet" href="loginstyle.css">
+
+    <title>Admin Login</title>
+</head>
+<body>
+    
+
+    <!-- login window -->
+    <div class="loginwindow">
+        <div class="logocontainer">
+            <div class="imgcontainer">
+                <img src="assets/logo.png"  class="logo">
+            </div>
+            <div class="textsection">
+                <span class="adminText">Admin</span>
+                <span class="bookingText">Booking Management</span>
+            </div>
+        </div>
+
+
+        <div class="loginInfo">
+            <span class="infoboxtext">Email</span>
+            <div class="inputcontainer"> 
+                <input type="email" name="fake-name" autocomplete="nothing" maxlength="25" id="email" class="user-input" placeholder=" " required>
+                <span class="inputplaceholder">example@domain.com</span>
+
+            </div>
+            
+            <span class="infoboxtext">Password</span>
+            <div class="inputcontainer">     
+                <input id="password" name="fake-name" autocomplete="nothing" class="user-input" type="password" placeholder=" " required>
+                <span class="inputplaceholder">Enter your password</span>
+                <button id="togglePassword" class="togglePassword"><i class="fa-solid fa-eye"></i></button>
+            </div>
+
+            <div class="forgetPassword" onclick="forgetPassword()">Forget Password?</div>
+
+        </div>
+        <div class="buttoncontainer">
+            <button class="loginbutton" onclick="authenticateLogIn()">Log In</button>
+        </div>
+    </div>
+    
+
+    <!-- forget password window -->
+
+    <div class="forgetPasswordWindow">
+
+        <div class="emailSentIconDiv"><i class="fa-regular fa-circle-check emailSentIcon"></i></div>
+
+        <div class="forgetPasswordText">
+
+            <span class="fpTitle">Check Your Email</span>
+            <span class="fpSubtext1">We've sent a verification code to imad25156@gmail.com</span>
+            <span class="fpSubtext2">Please check your email and enter the verification code to reset your password.</span>
+
+            <input type="text" inputmode="numeric" pattern="[0-9]*" placeholder="XXX-XXX" maxlength="7" class="user-input verificationNumberInput">
+            <span id="wrongcode" class="wrongcode-message">Wrong Code!</span>
+
+
+            <button class="verifyCode" onclick="verifyEmail()">Verify</button>
+            <button class="returnToLogin"onclick="backToLoginPage()">Return To Log In</button>
+
+        </div>
+
+    </div>
+
+    <!-- change password window-->
+     <div class="resetPasswordWindow">
+        <div class="shieldIconDiv"><i id="shieldIcon" class="fa-solid fa-shield"></i></div>
+
+        <div class="resetPasswordText">
+            <span class="rpTitle">Create New Password</span>
+            <span class="rpSubtext">Enter your new password below</span>
+        </div>
+
+        <div class="passInputsandNames">
+            <span class="infoboxtext">New Password</span>
+            <div class="inputcontainer"> 
+                <input id="passwordReset" name="fake-name" autocomplete="nothing" class="user-input" type="password" placeholder=" " required  pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[^A-Za-z\d]).{8,}$">
+                <span class="inputplaceholder">Enter new password</span>
+                <button id="toggleResetPassword" class="togglePassword"><i class="fa-solid fa-eye"></i></button>
+
+            </div>
+            
+            <span class="infoboxtext">Confirm Password</span>
+            <div class="inputcontainer">     
+                <input id="confirmPasswordReset" name="fake-name" autocomplete="nothing" class="user-input" type="password" placeholder=" " required >
+                <span class="inputplaceholder">Confirm new password</span>
+                <button id="toggleConfirmResetPassword" class="togglePassword"><i class="fa-solid fa-eye"></i></button>
+                
+            </div>
+
+        </div>
+        <span id="match-error" class="error-message">Passwords don't match</span>
+
+
+        <div class="password-requirements">
+            <span class="passReqText">Password Requirements:</span>
+            <ul>
+                <li id="length">At least 8 characters long</li>
+                <li id="letters-numbers">Contains both letters and numbers</li>
+                <li id="special-char">Includes a special character</li>
+              </ul>
+        </div>
+
+        
+        <button class="updatePassButton" onclick="validatePasswords()">Update Password</button>
+        
+
+        
+     </div>
+
+
+    
+    
+</body>
+</html>

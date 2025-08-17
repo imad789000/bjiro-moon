@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8e75413cde.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
+    <title>Admin</title>
+</head>
+<body>
+
+    <div class="navBackground">
+        
+
+        <div class="navContent">
+            <div class="LogoAndText">
+                <img src="assets/logo.png" alt="" class="logo">
+
+                <div class="text">
+                    <span class="adminText">Admin</span>
+                    <span class="bookingText">Booking Management</span>
+                </div>
+            </div>
+
+            <button class="logoutButton"><i class="fa-solid fa-arrow-right-from-bracket" style="padding-top: 1.5px;"></i>  Log out</button>
+        </div>
+
+    
+
+    </div>
+
+
+    <!-- Main Page -->
+
+    <div class="mainPage">
+        <div class="pannelButtons">
+            <div class="pannels">
+                <Button onclick="pannelButton(this)" class="dashboardButton selectedPannel"><i class="fa-solid fa-house"></i></i> Dashboard</button>
+                <Button onclick="pannelButton(this)" class="calendarButton"><i class="fa-regular fa-calendar"></i> Calendar</button>
+            </div>
+        </div>
+
+        
+        
+    
+    
+        <div class="dashboard">
+    
+            <span class="dashboardTitle">Dashboard</span>
+
+            <div class="bungSelection">
+            
+                <div class="bungSelectionText">
+                    <span class="bungSelectionTitle"><i class="fa-solid fa-house" style = "font-size: 1.2em; margin-right: 10px; color: #01294a;"></i> Bungalow Selection</span>
+                    <span class="bungSelectionSubtext">Filter bookings by bungalow or view all bookings</span>
+                </div>
+
+                <div class="selectionButtons">
+
+                    <button class="allBungButton" onclick="filterBookings(this)">All Bungalows</button>
+                    <button class="margaritaButton" onclick="filterBookings(this)">Margarita</button>
+                    <button class="tulipButton" onclick="filterBookings(this)">Tulip</button>
+                    <button class="lilyButton" onclick="filterBookings(this)">Lily</button>
+                </div>
+
+            </div>
+    
+            <div class="bookingPanels">
+    
+                <div class="confirmedBookings">
+    
+                    <div class="confirmedBookingsText">
+                        <span class="title"><i class="fa-regular fa-circle-check" style="color: rgb(66, 155, 66);"></i> Confirmed Bookings</span>
+                        <span class="subText">0 Confirmed Reservations</span>
+                    </div>
+    
+                </div>
+    
+                <div class="pendingBookings">
+    
+                    <div class="pendingBookingsText">
+                        <span class="title"><i class="fa-regular fa-clock" style="color: #d08700;"></i> Pending Bookings</span>
+                        <span class="subText">0 Pending Reservations</span>
+                    </div>
+    
+                </div>
+    
+            </div>
+    
+        </div>
+    
+        <div class="calendar">
+    
+                <span class="calendarTitle">Calendar Management</span>
+
+                
+    
+            <div class="calendarAndControl">
+    
+                <div class="calendarContainer">
+    
+                    <div class="calendarContainerTitle"><i class="fa-regular fa-calendar" style="font-size: 1.2em;"></i> <span>Booking Calendar</span></div>
+    
+                    <div class="calendarbox">
+                        <div class="calendar-header">
+                            <button id="prev" class="nav-btn">&lt;</button>
+                            <span id="month-year" class="month-year">July 2025</span>
+                            <button id="next" class="nav-btn">&gt;</button>
+                        </div>
+                        <div class="calendar-grid">
+                            <div class="day">Su</div>
+                            <div class="day">Mo</div>
+                            <div class="day">Tu</div>
+                            <div class="day">We</div>
+                            <div class="day">Th</div>
+                            <div class="day">Fr</div>
+                            <div class="day">Sa</div>
+                            <div id="dates"></div>
+                    
+                        </div>
+                    </div>
+    
+                    <div class="legends">
+    
+                        <div class="availableLegend"><i class="fa-regular fa-circle-check" style="margin-top: -2px;"></i> Available</div>
+                        <div class="bookedLegend"><i class="fa-regular fa-circle-xmark" style="margin-top: -2px;"></i> Booked</div>
+                        <div class="pendingLegend"><i class="fa-regular fa-clock" style="margin-top: -2px;"></i> Pending</div>
+    
+                    </div>
+    
+                </div>
+    
+                <div class="calendarControl">
+                    <span class="calendarControlTitle">Date Management</span>
+                    <span class="managingDate">Managing:  </span>
+    
+                    <div class="dateStatus"><span>Date Status:</span> <span class="statusAvailable">Available</span></div>
+    
+                    <div class="changeStatus"><span>Available for booking:</span><label class="switch"><input type="checkbox" class="slider" /><span class="slider"></span></label></div>
+    
+                    <button class="submitChange">Save</button>
+                </div>
+    
+            </div>
+    
+            
+    
+            
+    
+        </div>
+    </div>
+
+
+
+    <!-- Booker Information Page -->
+    <div class="bookerInfoPage">
+        <div class="sectionHolder">
+            <div class="mainWindow">
+                <div class="topPart">
+                    <div class="buttonAndText">
+                        <button class="backToDashboardButton">‎ <i class="fa-solid fa-arrow-left"></i>‎ ‎ ‎ ‎ Back to Dashboard</button>
+                        <span class="bookingdetailsText">Booking Details</span>
+                    </div>
+                    <div class="statusCircle">
+                        <div class="spanHolder"></div>
+                    </div>
+                </div>
+
+                <div class="gridBoxes">
+                    <div id="gridContent" class="guestInformationDiv">
+                        <div class="cardHeader">
+                            <span class="cardTitle">‎ <i id="cardIcon" class="fa-solid fa-user"></i>‎ ‎ ‎ ‎ Guest Information</span>
+                        </div>
+
+                        <div class="guestInfoHolder">
+                            <div class="namesDiv">
+                                <div class="nameExpresser">
+                                    <span class="xName">First Name</span>
+                                    <span id="first-name" class="guestName"></span>
+                                </div>
+
+                                <div class="nameExpresser">
+                                    <span class="xName">Last Name</span>
+                                    <span id="last-name" class="guestName"></span>
+                                </div>
+                            </div>
+
+
+                            <div class="otherInfoDiv">
+
+                                <div id="infoIcons" class="otherInfoContainer">
+                                    <i class="fa-solid fa-phone"></i>
+                                    <span class="infoType">Phone:</span>
+                                    <span class="infoValue" id="clientPhone"></span>
+                                </div>
+
+                                <div class="otherInfoContainer">
+                                    <i id="infoIcons" class="fa-solid fa-users"></i>
+                                    <span class="infoType">Number Of Guests:</span>
+                                    <span class="numberofguestsSpan"></span>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="gridContent" class="bookingDetailsDiv">
+                        <div class="cardHeader">
+                            <span class="cardTitle">‎ <i id="cardIcon" class="fa-solid fa-calendar"></i>‎ ‎ ‎ ‎ Booking Details</span>
+                        </div>
+
+                        <div class="guestInfoHolder">
+                            <div class="datesDiv">
+                                <div class="dateExpresser">
+                                    <span class="xDate">Check-in</span>
+                                    <span id="checkin-date" class="dateValue"></span>
+                                </div>
+
+                                <div class="dateExpresser">
+                                    <span class="xDate">Check-out</span>
+                                    <span id="checkout-date" class="dateValue"></span>
+                                </div>
+                            </div>
+
+                            <div class="bookingOtherInfoContainer">
+                                <div class="bookingDetailsInfo">
+                                    <span class="xDate">Date Of Booking</span>
+                                    <span class="dateOfBookingText"></span>
+                                </div>
+    
+                                <div class="bookingDetailsInfo">
+                                    <span class="xDate">Total Amount</span>
+                                    <span class="price">160$</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                    
+                    <!-- <div id="gridContent" class="buttonsDiv"></div> -->
+                </div>
+
+                <div id="gridContent" class="documentsDiv">
+                    <div class="cardHeader">
+                        <span class="cardTitle">‎ <i id="cardIcon" class="fa-solid fa-file"></i>‎ ‎ ‎ ‎ Documents</span>
+                    </div>
+
+                    <div class="guestInfoHolder">
+                        <div class="documentBox">
+                            <div class="documentTextAndButton">
+                                <div class="documentText">
+                                    <i id="documentIcon" class="fa-solid fa-file"></i>
+                                    <span class="idDocumentText">ID Document</span>
+                                </div>
+                                <button class="viewfileButton">View File</button>
+                            </div>
+
+                            <span class="fileName">id.png</span>
+                        </div>
+                    </div>
+
+
+                 </div>
+
+                 <div class="buttonsDiv">
+                    <!-- <button class="declineBooking">Decline Booking</button>
+                    <button class="approveBooking">Approve Booking</button> -->
+                 </div>
+            </div>
+        </div>
+    </div>
+
+    
+    
+</body>
+</html>

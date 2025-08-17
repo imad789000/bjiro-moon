@@ -1,0 +1,1329 @@
+body{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #F9FAFB;
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
+}
+
+* {
+    user-select: none;
+  }
+
+.navBackground{
+    background-color: #01294a;
+    height: 70px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navContent{
+    width: 80vw;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    height: auto;
+    width: 50px;
+    
+}
+
+.LogoAndText{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 70%;
+
+}
+
+.text{
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    padding-top: 7px;
+    
+}
+
+.adminText{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: white;
+}
+
+.bookingText{
+    color: #a4c8ec;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.logoutButton{
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+    width: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s ease-in, color 0.3s ease-in;
+}
+
+.logoutButton:hover{
+    background-color: #1b3f5c;
+    color: #012951;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.pannelButtons{
+    margin-top: 30px;
+    /* width: 60vw; */
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.pannels{
+    width: 260px;
+    padding: 5px 5px 5px 5px;
+    border-radius: 20px;
+    background-color: #ececf0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.calendarButton, .dashboardButton{
+    background-color: transparent;
+    border: none;
+    height: 25px;
+    border-radius: 20px;
+    padding: 5px 20px 5px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 0.72em;
+}
+
+.calendarButton:hover, .dashboardButton:hover{
+    background-color: #e1e1e2;
+    color: rgb(56, 56, 56);
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+}
+
+.dashboardButton{
+    width: 125px;
+}
+
+.calendarButton{
+    width: 115px;
+}
+
+.selectedPannel{
+    background-color: white;
+}
+
+.mainPage{
+    align-self: center;
+    width: 100vw;
+    /* height: 100vh; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* dashboard */
+
+.dashboard{
+    width: 60%;
+    margin-top: 30px;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+
+}
+
+
+
+
+.dashboardTitle{
+    font-size: 1.5em;
+    font-weight: 800;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 750;
+    font-style: normal;
+}
+
+.bungSelection{
+    background-color: white;
+    border: 1px solid rgb(218, 218, 218);
+    width: clamp(450px, 50vw, 850px);
+    padding: 20px;
+    border-radius: 7px;
+    margin-top: 30px;
+
+}
+
+.bungSelectionText{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    margin-bottom: 40px;
+}
+
+.bungSelectionTitle{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 600;
+    margin-bottom: 10px;
+
+}
+
+.bungSelectionSubtext{
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 0.9em;
+    color: rgb(83, 83, 83);
+}
+
+
+.selectionButtons{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+
+.allBungButton, .margaritaButton, .tulipButton, .lilyButton{
+
+    padding: 7px 10px 7px 10px;
+    background-color: transparent;
+    border-radius: 6px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 600;
+
+    transition: background-color 0.3s ease-in-out, color 0.1s ease-in-out;
+}
+
+.allBungButton{
+    border: 1px solid #01294a;
+}
+
+.allBungButtonClicked{
+    background-color: #01294a;
+    color: white;
+    transition: background-color 0.3s ease-in-out, color 0.1s ease-in-out;
+}
+
+.allBungButton:hover{
+    cursor: pointer;
+    background-color: #01294a;
+    color: white;
+    transition: background-color 0.3s ease-in-out, color 0.1s ease-in-out;
+}
+
+.margaritaButton{
+    border: 1px solid #e60076;
+}
+
+.margaritaButtonClicked{
+    background-color: #e60076;
+    color: white;
+    transition: background-color 0.3s ease-in-out, color 0.1s ease-in-out;
+}
+
+.margaritaButton:hover{
+    cursor: pointer;
+    background-color: #e60076;
+    color: white;
+    transition: background-color 0.3s ease-in-out, color 0.1s ease-in-out;
+}
+
+.tulipButton{
+    border: 1px solid #9810fa;
+}
+
+.tulipButtonClicked{
+    background-color: #9810fa;
+    color: white;
+    transition: background-color 0.3s ease-in-out, color 0.1s ease-in-out;
+}
+
+.tulipButton:hover{
+    cursor: pointer;
+    background-color: #9810fa;
+    color: white;
+    transition: background-color 0.3s ease-in-out, color 0.1s ease-in-out;
+}
+
+.lilyButton{
+    border: 1px solid #f54900;
+}
+
+.lilyButtonClicked{
+    background-color: #f54900;
+    color: white;
+    transition: background-color 0.3s ease-in-out, color 0.1s ease-in-out;
+}
+
+.lilyButton:hover{
+    cursor: pointer;
+    background-color: #f54900;
+    color: white;
+    transition: background-color 0.3s ease-in-out, color 0.1s ease-in-out;
+}
+
+
+
+.bookingPanels{
+    width: auto;
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: row;
+
+}
+.confirmedBookings{
+    margin-right: 30px;
+}
+
+
+
+
+
+.confirmedBookings, .pendingBookings{
+    margin-top: 40px;
+    height: 400px;
+    width: 380px;
+    border: 1px solid rgb(218, 218, 218);
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+}
+
+.confirmedBookingsText, .pendingBookingsText{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50px;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.title{
+    font-size: 1.2em;
+    font-weight: 650;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.subText{
+    font-size: 0.85em;
+    color: grey;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.confirmedBookingRequest, .pendingBookingRequest{
+    position: relative;
+    height: 40px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+
+.confirmedBookingRequest{
+    border: 1px solid #b9f8cf;
+    background-color: #f0fdf4;
+}
+
+.confirmedBookingRequest:hover{
+    background-color: #d2f7dd;
+}
+
+
+.pendingBookingRequest{
+    border: 1px solid #fff085;
+    background-color: #fefce8;
+}
+
+.pendingBookingRequest:hover{
+    background-color: #f7f3d7;
+}
+
+.confirmedrequestInfo, .pendingBookingsrequestInfo{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.name{
+    font-weight: 500;
+    margin-bottom: 3px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 1em;
+}
+
+.date1{
+    font-size: 0.8em;
+    color: grey;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    text-align: start;
+}
+
+.tagsDiv{
+    position: absolute;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.statusConfirmed, .statuspending, .margaritaBungTag, .tulipBungTag, .lilyBungTag{
+    padding: 2px 5px 2px 5px;
+    font-weight: 500;
+    border-radius: 5px;
+    font-size: 0.6em;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.statusConfirmed{
+    background-color: #dbfce7;
+    border: 1px solid #b9f8cf;
+    color: #3a7753;
+}
+
+.statuspending
+{
+    background-color: #fef9c2;
+    border: 1px solid #ffdf20;
+    color: #d09000;
+}
+
+.margaritaBungTag{
+    background-color: #fce7f3;
+    border: 1px solid #ffa9d8;
+    color: #b7006c;
+}
+
+.tulipBungTag{
+    background-color: #ffedd4;
+    border: 1px solid #ffc27c;
+    color: #ca690c;
+}
+
+.lilyBungTag{
+    background-color: #f3e8ff;
+    border: 1px solid #d09aff;
+    color: #7e23b8;
+}
+
+
+/* callendar */
+
+.calendar{
+    height: 600px;
+
+    width: 65%;
+    
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+.calendarTitle{
+    font-size: 1.4em;
+    color: #0A0A0A;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    user-select: none;
+    margin-top: 30px;
+}
+
+.calendarContainer
+{
+    border: 1px solid rgb(201, 201, 201);
+    border-radius: 10px;
+    padding: 20px;
+
+}
+
+.calendarContainerTitle{
+    width: 175px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-left: 6px;
+    justify-content: space-between;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    user-select: none;
+}
+
+.calendarbox{
+    width: clamp(350px,26vw,400px);
+    align-self: center;
+    justify-self: center;
+    border: 1px solid rgb(212, 212, 212);
+    border-radius: 10px;
+}
+
+
+  
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #0A0A0A;
+    padding: 15px;
+    font-size: clamp(0.8em,3vw,1.1em);
+
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    user-select: none;
+    color: #0A0A0A;
+
+}
+
+ .nav-btn {
+    background: white;
+    color: #0A0A0A;
+    border: 1px solid rgb(209, 209, 209);
+    font-size: clamp(0.8em,3vw,1.1em);
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    background: #cdd4dd;
+}
+
+.calendar-grid {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(7, 1fr);
+    padding: 15px;
+}
+
+.day {
+    text-align: center;
+    color: #555;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-size: clamp(0.8em,3vw,1em);
+    font-weight: 550;
+    font-style: normal;
+    user-select: none;
+
+}
+
+#dates {
+display: contents;
+}
+
+
+
+.date {
+text-align: center;
+justify-content: center;
+padding-top: 12px;
+padding-bottom: 12px;
+
+background-color: transparent;
+border-radius: 10px;
+cursor: pointer;
+transition: 0.3s;
+font-family: "Montserrat", sans-serif;
+font-optical-sizing: clamp(0.6,7vw,0.8em);
+height: 40px;
+font-weight: 600;
+font-style: normal;
+user-select: none;
+width: 40px;
+border: none;
+margin-top: 5px;
+
+display: flex;
+
+}
+
+.date:hover {
+background: #e0e7ff;
+}
+
+.date.past {
+  background-color: #eee;
+  color: #888;
+  cursor: default;
+  pointer-events: none;
+}
+
+.legends{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.availableLegend, .bookedLegend, .pendingLegend{
+    padding: 2px 7px 2px 7px;
+    border-radius: 5px;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 0.65em;
+    
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.availableLegend{
+    background-color: #c7ffdc;
+    color: #247e4e;
+    margin-right: 20px;
+    width: 60px;
+    height: 15px;
+}
+
+.bookedLegend{
+    background-color: #ffe2e2;
+    color: #9f0712;
+    width: 55px;
+    height: 15px;
+    margin-right: 20px;
+
+}
+
+.pendingLegend{
+    background-color: #fef9c2;
+    color: #d09000;
+    width: 55px;
+    height: 15px;
+}
+
+
+/* common animations */
+
+
+
+.deselected{
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.selected{
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* callender control */
+
+.calendarAndControl{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.calendarControl{
+    height: 180px;
+    width: 352px;
+    border: 1px solid rgb(209, 209, 209);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+
+
+.calendarControlTitle{
+    color: #0a0a21;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 0.9em;
+    font-weight: 700;
+    font-style: normal;
+    user-select: none;
+    margin-bottom: 6px;
+
+}
+
+.managingDate{
+    color: rgb(139, 139, 139);
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+
+    margin-bottom: 25px;
+}
+
+.dateStatus{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 0.9em;
+}
+
+.statusAvailable, .statusUnavailable{
+    padding: 2px 7px 2px 7px;
+    border-radius: 20px;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 0.8em;
+    
+}
+
+.statusAvailable{
+    background-color: #c5f3d6;
+    color: #2e6143;
+}
+
+.statusPending{
+    background-color: #fef9c2;
+    border: 1px solid #ffdf20;
+    color: #d09000;
+}
+
+.statusUnavailable{
+    background-color: #f3f4f6;
+    color: #0A0A0A;
+}
+
+.availableDate{
+    background-color: #dfffe8;
+    color: rgb(32, 134, 32);
+}
+
+.availableDate:hover{
+    background-color: #b1ffc7;
+    cursor: pointer;
+}
+
+.pendingDate{
+    background-color: #fef9c2;
+    color: #c49413;
+}
+
+.pendingDate:hover{
+    background-color: rgb(253, 243, 129);
+    cursor: pointer;
+}
+
+.unavailableDate{
+    background-color: #ffe2e2;
+    color: #fb2c36;
+    text-decoration: line-through;
+}
+
+.unavailableDate:hover{
+    background-color: #e9ebef;
+    color: #60606c;
+}
+
+.selectedButton{
+    background-color: #01294a;
+    color: whitesmoke;
+}
+
+/* for slider */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 16px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #01294a;
+    transition: 0.4s;
+    border-radius: 25px;
+}
+
+.slider::before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 2px;
+    top: 2px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+.sliderDisabled{
+    background-color: grey;
+    cursor: not-allowed;
+}
+
+input:checked + .slider::before {
+    transform: translateX(14px);
+}
+
+input:checked + .slider {
+    background-color: #ccc; /* Optional alternate color */
+}
+
+.changeStatus{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 0.9em;
+    
+}
+
+.submitChange{
+    border: none;
+    background-color: #01294a;
+    color: white;
+    padding: 10px 0px 10px 0px;
+    border-radius: 7px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 0.8em;
+    font-weight: 300;
+    font-style: normal;
+    user-select: none;
+}
+
+
+/* .mainPage{
+    display: none;
+} */
+
+
+.bookerInfoPage{
+    width: 100%;
+    display: flex;
+    place-content: center;
+    display: none;
+}
+
+.bookingStatusConfirmed, .bookingStatusPending{
+    padding: 10px 15px 10px 15px;
+    font-weight: 500;
+    border-radius: 20px;
+    font-size: 1em;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.bookingStatusConfirmed{
+    background-color: #dbfce7;
+    border: 1px solid #b9f8cf;
+    color: #3a7753;
+}
+
+.bookingStatusPending
+{
+    background-color: #fef9c2;
+    border: 1px solid #ffdf20;
+    color: #d09000;
+}
+
+.sectionHolder{
+    padding: 20px 15px 20px 15px;
+    width: 80%;
+    margin-bottom: 30px;
+
+}
+
+/* .mainWindow{
+    
+} */
+
+.topPart{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 30px;
+}
+
+.buttonAndText{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    text-align: center;
+}
+
+.bookingdetailsText{
+    align-self: center;
+    justify-self: center;
+    font-weight: 700;
+    font-size: 1.5em;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+
+}
+.statusCircle{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.backToDashboardButton{
+    /* height: 34px; */
+    padding: 8px 10px 8px 10px;
+    align-self: center;
+    justify-self: center;
+    background-color: transparent;
+    border: none;
+    transition: background-color 0.3s ease;
+    border-radius: 8px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: clamp(0.7em,2vw,0.8em);
+    user-select: none;
+}
+
+.backToDashboardButton:hover{
+    background-color: rgb(230, 232, 238);
+}
+
+.gridBoxes{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 25px; /* space between boxes */
+    /* padding: 20px; */
+}
+@media (max-width: 900px) {
+    .gridBoxes {
+      grid-template-columns: 1fr; /* One column */
+    }
+
+    .buttonAndText{
+        margin-right: 32px;
+        gap: 15px;
+    }
+
+    body{
+        height: auto;
+        overflow-y: scroll;
+    }
+
+  }
+
+#gridContent{
+    background-color: #FFFFFF;
+    height: auto;
+    border: 1px solid #E5E5E5;
+    border-radius: 12px;
+}
+
+
+.guestInformationDiv, .bookingDetailsDiv, .documentsDiv{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.cardHeader{
+    padding: 20px 20px 0px 20px;
+    margin-bottom: 5px;
+}
+
+#cardIcon{
+    color: #4E6A81;
+}
+
+.cardTitle{
+    font-weight: 600;
+    font-size: 1em;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+.guestInfoHolder{
+    padding:0px 20px 20px 20px;
+    margin-bottom:10px
+}
+
+.namesDiv, .datesDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #E5E5E5;
+
+}
+
+.nameExpresser, .dateExpresser{
+    display: flex;
+    flex-direction: column;
+    gap:8px;
+    width: 45%;
+}
+
+.xName,.xDate{
+    font-weight: 550;
+    font-size: 0.8em;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: #717182;
+}
+
+.guestName, .dateValue{
+    font-weight: 550;
+    font-size: 1em;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: black;
+}
+
+.otherInfoContainer{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+#infoIcons{
+    color: #717182;
+    font-size: 0.9em;
+    align-self: center;
+}
+
+.infoType{
+    font-weight: 500;
+    font-size: 0.8rem;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: #717182;
+    align-self: center;
+}
+
+.infoValue{
+    font-weight: 600;
+    font-size: 0.9rem;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: black;
+    align-self: center;
+}
+
+.numberofguestsSpan{
+    padding: 3px 5px 3px 5px;
+    background-color: #ECEEF2;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.8rem;
+    color: rgb(37, 37, 37);
+    align-self: center;
+    border-radius: 10px;
+}
+
+.bookingDetailsInfo{
+    display: flex;
+    flex-direction: column;
+    gap:10px
+}
+
+.bookingOtherInfoContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.dateOfBookingText{
+    font-weight: 500;
+    font-size: 0.95rem;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: black;
+}
+
+.price{
+    font-weight: 600;
+    font-size: 1rem;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: #20405c;
+}
+
+.documentBox{
+    padding: 15px;
+    padding-bottom: 20px;
+    margin-bottom: 15px;
+    background-color: #F9FAFB;
+    border: 1px solid #E5E5E5;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    /* gap: 5px; */
+}
+
+.documentTextAndButton{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+
+}
+
+.documentText{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+#documentIcon{
+  color: #717182 ;  
+  font-size: 0.8rem;
+  align-self: center;
+}
+
+.idDocumentText{
+    font-weight: 650;
+    font-size: 1rem;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: black;
+    align-self: center;
+}
+
+.fileName{
+    font-weight: 500;
+    font-size: 0.82rem;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: #717182;
+}
+
+.viewfileButton{
+    border-radius: 11px;
+    background-color: white;
+    border: 1px solid #E5E5E5;
+    padding: 10px 15px 10px 15px;
+    font-weight: 590;
+    font-size: 0.9rem;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    transition: background-color 0.2s ease;
+}
+
+.viewfileButton:hover{
+    background-color: #e8f4fd;
+    color: #01294a;
+}
+
+.buttonsDiv{
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+}
+
+.declineBooking, .approveBooking{
+    padding-left: 10px;
+    padding-right: 10px;
+    width: auto;    
+    height: 35px;
+    text-align: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.75rem;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* transition: color 0.2s ease; */
+
+    
+}
+
+.declineBooking{
+    background-color: white;
+    border: 1px solid #FFC9C9;
+    color: #e71729;
+    /* transition: background-color 0.3s ease; */
+    /* transition: color 0.2s ease; */
+
+}
+
+.declineBooking:hover{
+    background-color: #fef2f2;
+    color: #01294a;
+}
+
+.approveBooking{
+    background-color: #01294a;
+    color: white;
+    border: none;
+    /* transition: back 0.3s ease; */
+    /* transition: color 0.2s ease; */
+}
+
+.approveBooking:hover{
+    background-color: #145481;
+    color: white;
+}
+
+@media(max-width: 1054px){
+
+    body{
+        margin-bottom: 400px;
+    }
+
+    .bookingPanels{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    /* .dashboard{
+        text-align: center;
+    } */
+
+    /* .pannelButtons{
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+    } */
+
+    .confirmedBookings{
+        margin-right: 0px;
+    }
+    .calendarAndControl
+    {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 1420px)
+{
+
+    .pannelButtons{
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+    }
+
+    .dashboard{
+        width: 80%;
+        
+    }
+
+    .bookingPanels{
+        display: flex;
+        justify-content: center;
+    }
+
+    .calendar
+    {
+        width: 90%;
+        /* display: flex;
+        align-items: center; */
+    }
+}
