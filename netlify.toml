@@ -1,5 +1,16 @@
+# Minimal config for static sites
+[build]
+  publish = "."  # Publish from current directory
+  command = "echo 'No build step needed'"  # Empty build command
+
+# Example redirect (adjust as needed)
 [[redirects]]
-  from = "http://*"
-  to = "https://:splat"
+  from = "/old"
+  to = "/new.html"
   status = 301
-  force = true
+
+# Example custom header
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
